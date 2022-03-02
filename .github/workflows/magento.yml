@@ -28,7 +28,7 @@ jobs:
       env:
         COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
       with:
-        php: '7.4'
+        php: '7.2'
         process: 'unit-test'
         elasticsearch: 1
     - name: 'this step starts static testing the code'
@@ -37,7 +37,7 @@ jobs:
       env:
         COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
       with:
-        php: '7.4'
+        php: '7.2'
         process: 'static-test'
         elasticsearch: 1
     - name: 'this step will build an magento artifact'
@@ -46,6 +46,6 @@ jobs:
       env:
         COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
       with:
-        php: '7.4'
+        php: '7.2'
         process: 'build'
         elasticsearch: 1
